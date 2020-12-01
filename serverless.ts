@@ -4,6 +4,10 @@ const serverlessConfiguration: Serverless = {
   service: 'serverless-boilerplate',
   frameworkVersion: '2',
   custom: {
+    esbuild: {
+      bundle: true,
+      minify: true,
+    },
     // webpack: {
     //   webpackConfig: './webpack.config.js',
     //   includeModules: true,
@@ -11,12 +15,12 @@ const serverlessConfiguration: Serverless = {
     // },
   },
   // Add the serverless-webpack plugin
-  plugins: ['serverless-bundle', 'serverless-offline'],
+  plugins: ['serverless-esbuild', 'serverless-offline'],
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
     region: 'ap-south-1',
-    // memorySize: 256,
+    memorySize: 128,
     versionFunctions: true,
     apiGateway: {
       minimumCompressionSize: 1024,
@@ -25,6 +29,11 @@ const serverlessConfiguration: Serverless = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
     },
+  },
+  package: {
+    individually: true,
+    excludeDevDependencies: true,
+    exclude: ['node_modules/aws-sdk/**']
   },
   functions: {
     hello: {
