@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    // 'plugin:jest/recommended',
+    'plugin:jest/recommended',
     'plugin:@typescript-eslint/eslint-recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     'plugin:import/errors',
     'plugin:import/warnings',
