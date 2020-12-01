@@ -33,7 +33,7 @@ const serverlessConfiguration: Serverless = {
   package: {
     individually: true,
     excludeDevDependencies: true,
-    exclude: ['node_modules/aws-sdk/**']
+    exclude: ['node_modules/aws-sdk/**'],
   },
   functions: {
     hello: {
