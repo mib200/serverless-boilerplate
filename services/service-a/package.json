@@ -1,0 +1,8 @@
+{
+  "name": "serverless-boilerplate-service-b",
+  "scripts": {
+    "dev": "../../node_modules/.bin/cross-env NODE_ENV=local SLS_DEBUG=* serverless offline start --stage local",
+    "deploy:uat": "../../node_modules/.bin/cross-env NODE_ENV=uat serverless deploy --stage uat",
+    "deploy:prod": "../../node_modules/.bin/cross-env NODE_ENV=production serverless deploy --stage prod"
+  }
+}

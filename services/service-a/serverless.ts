@@ -1,7 +1,8 @@
 import type { Serverless } from 'serverless/aws';
+const handlers = require('./serverless-dynamic.ts');
 
 const serverlessConfiguration: Serverless = {
-  service: 'serverless-boilerplate',
+  service: 'serverless-boilerplate-service-b',
   frameworkVersion: '2',
 
   provider: {
@@ -28,28 +29,22 @@ const serverlessConfiguration: Serverless = {
   },
 
   custom: {
+    urlBasePath: 'api/v1/',
     esbuild: {
       bundle: true,
       minify: true,
     },
-  },
-
-  plugins: ['serverless-esbuild', 'serverless-offline'],
-
-  functions: {
-    hello: {
-      handler: 'handler.hello',
-      events: [
-        {
-          http: {
-            method: 'get',
-            path: 'hello',
-            // operationId: 'sayHello',
-          },
-        },
-      ],
+    splitStacks: {
+      nestedStackCount: 20,
+      perFunction: false,
+      perType: false,
+      perGroupFunction: true,
     },
   },
+
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-plugin-split-stacks'],
 };
+
+serverlessConfiguration.functions = handlers(serverlessConfiguration);
 
 module.exports = serverlessConfiguration;
