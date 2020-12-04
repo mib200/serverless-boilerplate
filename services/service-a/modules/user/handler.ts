@@ -10,7 +10,7 @@ module.exports = (config) => {
             method: 'get',
             path: `${config.custom.urlBasePath}user`,
           },
-        },
+        }
       ],
     },
     'user-UPDATE': {
