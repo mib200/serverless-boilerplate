@@ -1,8 +1,11 @@
 import type { Serverless } from 'serverless/aws';
 const handlers = require('./serverless-dynamic.ts');
 
+const coreService = 'serverless-boilerplate';
+const microService = 'service-a';
+
 const serverlessConfiguration: Serverless = {
-  service: 'serverless-boilerplate-service-b',
+  service: `${coreService}-${microService}`,
   frameworkVersion: '2',
 
   provider: {
@@ -29,7 +32,7 @@ const serverlessConfiguration: Serverless = {
   },
 
   custom: {
-    urlBasePath: 'api/v1/',
+    urlBasePath: `api/${coreService}/v1/${microService}`,
     esbuild: {
       bundle: true,
       minify: true,

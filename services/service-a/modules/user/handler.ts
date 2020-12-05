@@ -1,4 +1,4 @@
-import userSchema from '../models/user-schema.json';
+import userSchema from '../../models/user-schema.json';
 
 module.exports = (config) => {
   return {
