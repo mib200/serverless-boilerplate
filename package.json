@@ -1,6 +1,6 @@
 {
   "name": "serverless-boilerplate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A TypeScript starter for Serverless Framework",
   "main": "handler.js",
   "scripts": {
