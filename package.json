@@ -48,7 +48,21 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@dazn/lambda-powertools-logger": "^1.24.1",
+    "@dazn/lambda-powertools-middleware-correlation-ids": "^1.27.0",
+    "@dazn/lambda-powertools-middleware-log-timeout": "^1.24.1",
+    "@dazn/lambda-powertools-middleware-sample-logging": "^1.24.1",
+    "@middy/core": "^1.4.0",
+    "@middy/do-not-wait-for-empty-event-loop": "^1.4.0",
+    "@middy/http-cors": "^1.4.0",
+    "@middy/http-error-handler": "^1.4.0",
+    "@middy/http-event-normalizer": "^1.4.0",
+    "@middy/http-json-body-parser": "^1.4.0",
+    "@middy/http-multipart-body-parser": "^1.4.0",
+    "@middy/http-security-headers": "^1.4.0",
+    "@middy/http-urlencode-path-parser": "^1.4.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run branch:check",

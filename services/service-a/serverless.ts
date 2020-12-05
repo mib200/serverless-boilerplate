@@ -32,7 +32,7 @@ const serverlessConfiguration: Serverless = {
   },
 
   custom: {
-    urlBasePath: `api/${coreService}/v1/${microService}`,
+    urlBasePath: `api/${coreService}/v1/${microService}/`,
     esbuild: {
       bundle: true,
       minify: true,
