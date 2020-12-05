@@ -1,4 +1,4 @@
-import userSchema from '../models/user-schema.json';
+import userSchema from '../../models/user-schema.json';
 
 module.exports = (config) => {
   return {
@@ -10,7 +10,7 @@ module.exports = (config) => {
             method: 'get',
             path: `${config.custom.urlBasePath}user`,
           },
-        }
+        },
       ],
     },
     'user-UPDATE': {

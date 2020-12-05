@@ -1,5 +1,5 @@
 {
-  "name": "serverless-boilerplate-service-b",
+  "name": "serverless-boilerplate-service-a",
   "scripts": {
     "dev": "../../node_modules/.bin/cross-env NODE_ENV=local SLS_DEBUG=* serverless offline start --stage local",
     "deploy:uat": "../../node_modules/.bin/cross-env NODE_ENV=uat serverless deploy --stage uat",
