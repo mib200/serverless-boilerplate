@@ -12,7 +12,6 @@ function findFilesInDir(startPath, filter) {
   let results = [];
 
   if (!fs.existsSync(startPath)) {
-    console.log('no dir ', startPath);
     return;
   }
 

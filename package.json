@@ -1,6 +1,6 @@
 {
   "name": "serverless-boilerplate",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A TypeScript starter for Serverless Framework",
   "main": "handler.js",
   "scripts": {
@@ -49,10 +49,20 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
+    "@dazn/lambda-powertools-cloudwatchevents-client": "^1.26.0",
+    "@dazn/lambda-powertools-dynamodb-client": "^1.26.0",
+    "@dazn/lambda-powertools-eventbridge-client": "^1.26.0",
+    "@dazn/lambda-powertools-firehose-client": "^1.26.0",
+    "@dazn/lambda-powertools-http-client": "^1.24.3",
+    "@dazn/lambda-powertools-kinesis-client": "^1.26.0",
+    "@dazn/lambda-powertools-lambda-client": "^1.26.0",
     "@dazn/lambda-powertools-logger": "^1.24.1",
     "@dazn/lambda-powertools-middleware-correlation-ids": "^1.27.0",
     "@dazn/lambda-powertools-middleware-log-timeout": "^1.24.1",
     "@dazn/lambda-powertools-middleware-sample-logging": "^1.24.1",
+    "@dazn/lambda-powertools-sns-client": "^1.26.0",
+    "@dazn/lambda-powertools-sqs-client": "^1.26.0",
+    "@dazn/lambda-powertools-step-functions-client": "^1.26.0",
     "@middy/core": "^1.4.0",
     "@middy/do-not-wait-for-empty-event-loop": "^1.4.0",
     "@middy/http-cors": "^1.4.0",

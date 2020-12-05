@@ -1,4 +1,5 @@
 import type { Context, APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
+// import * as clients from '@/services/shared/libs';
 import middleware from '@/services/shared/middleware';
 import Log from '@dazn/lambda-powertools-logger';
 
