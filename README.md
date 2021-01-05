@@ -48,7 +48,7 @@ export async function hello(event: APIGatewayEvent, context: Context): Promise<A
 To create a new Serverless project.
 
 ```bash
-$ serverless install --url https://github.com/AnomalyInnovations/serverless-typescript-starter --name my-project
+$ serverless install --url https://github.com/mib200/serverless-boilerplate --name my-project
 ```
 
 Enter the new directory
